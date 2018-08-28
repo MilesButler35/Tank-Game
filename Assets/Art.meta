@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ce419e44d190624419d2fd79e8701f5e
+=======
+guid: efc1a30eb0de294438968f1274a6bda9
+>>>>>>> Elliott-test2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

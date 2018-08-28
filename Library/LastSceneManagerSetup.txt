@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/AI-test.unity
+=======
+- path: Assets/Scenes/New Scene.unity
+>>>>>>> Elliott-test2
   isLoaded: 1
   isActive: 1
