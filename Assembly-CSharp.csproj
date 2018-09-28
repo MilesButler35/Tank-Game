@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
@@ -190,6 +191,17 @@
     <None Include="Assets\Kawaii_Tanks_Project\ReadMe\[04] Layer Settings.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+=======
+    <Compile Include="Assets\Animations\TEST.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\Heap.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\PathRequestManager.cs" />
+    <Compile Include="Assets\Scripts\Spam_Console.cs" />
+    <Compile Include="Assets\Scripts\TankMovement.cs" />
+>>>>>>> master
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Thomas/Desktop/Fall2018/4236_AiForGames/Tanks_TFay/Tank_TFay/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
