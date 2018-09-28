@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 611, y: 392}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 27
+  controlID: 66
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 392}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 28
+  controlID: 89
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2c0f0000
+    m_SelectedIDs: ee0c0000
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
@@ -579,21 +579,20 @@ MonoBehaviour:
     m_ReferencingInstanceIDs: 
     m_ScenePaths: []
     m_ShowAllHits: 0
-    m_SearchArea: 0
-    m_Folders:
-    - Assets/Scripts/Tank
+    m_SearchArea: 1
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Thomas\Desktop\Fall2018\4236_AiForGames\Tanks_TFay\Tank_TFay
+  m_LastProjectPath: C:\Users\Thomas\Documents\GitHub\Tank-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 08670000
     m_LastClickedID: 26376
-    m_ExpandedIDs: 000000006c0a0000d40a0000e40a0000f20a0000300b0000600b0000740b0000780b0000c00b0000c20b0000820c0000200d0000220d00005e0d00002c0f0000780f00008a0f0000fa0f00008e1000009c100000061100005e120000bc120000241300002a1300002c1300004a13000066130000
+    m_ExpandedIDs: 000000006c0a0000d40a0000e40a0000f20a0000300b0000600b0000c00b0000c20b0000820c00001e0d0000200d00005c0d00002a0f0000760f0000f80f00008c1000009a100000041100005c120000ba1200002013000062130000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,10 +617,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 120}
+    scrollPos: {x: 0, y: 184}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000006c0a0000d40a0000e40a0000f20a0000300b0000600b0000c00b0000c20b0000820c0000200d0000220d00005e0d00002c0f0000780f0000fa0f00008e1000009c100000061100005e120000bc1200002413000066130000
+    m_ExpandedIDs: ffffffff000000006c0a0000d40a0000e40a0000f20a0000300b0000600b0000c00b0000c20b0000820c00001e0d0000200d00005c0d00002a0f0000760f0000f80f00008c1000009a100000041100005c120000ba1200002013000062130000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
