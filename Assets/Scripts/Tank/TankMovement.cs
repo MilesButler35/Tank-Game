@@ -105,7 +105,8 @@ public class TankMovement : MonoBehaviour
         Vector3 movement = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
 
         // Apply this movement to the rigidbody's position.
-        m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
+        //m_Rigidbody.velocity = movement *8f;
+          m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
     }
 
 

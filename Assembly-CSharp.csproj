@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{10C408AE-640A-E873-165B-C0A3C7F6A76C}</ProjectGuid>
+    <ProjectGuid>{EB2F4F19-3B2D-D3B6-3BB9-620EE8C2E736}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
@@ -139,12 +138,19 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\Heap.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TankManager.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
+    <Compile Include="Assets\Scripts\Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\PathRequestManager.cs" />
+    <Compile Include="Assets\Scripts\Tank\EnemyFire.cs" />
     <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
+    <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
     <Compile Include="Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\Scripts\UI\UIDirectionControl.cs" />
-    <Compile Include="Assets\TankMovement.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -191,28 +197,17 @@
     <None Include="Assets\Kawaii_Tanks_Project\ReadMe\[04] Layer Settings.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
-=======
-    <Compile Include="Assets\Animations\TEST.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\Heap.cs" />
-    <Compile Include="Assets\Scripts\Node.cs" />
-    <Compile Include="Assets\Scripts\Pathfinding.cs" />
-    <Compile Include="Assets\Scripts\PathRequestManager.cs" />
-    <Compile Include="Assets\Scripts\Spam_Console.cs" />
-    <Compile Include="Assets\Scripts\TankMovement.cs" />
->>>>>>> master
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Thomas/Desktop/Fall2018/4236_AiForGames/Tanks_TFay/Tank_TFay/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Thomas/Documents/GitHub/Tank-Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Thomas/Desktop/Fall2018/4236_AiForGames/Tanks_TFay/Tank_TFay/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Thomas/Documents/GitHub/Tank-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Thomas/Desktop/Fall2018/4236_AiForGames/Tanks_TFay/Tank_TFay/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Thomas/Documents/GitHub/Tank-Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Thomas/Desktop/Fall2018/4236_AiForGames/Tanks_TFay/Tank_TFay/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Thomas/Documents/GitHub/Tank-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -448,7 +443,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{74D86A28-06BC-D1E8-DD15-F0792B0D0DF7}</Project>
+      <Project>{3FDF65AC-7DA6-7FBB-61F1-0DFE17E69FF7}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
