@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
             if(count < maxShell)
             {
                 Blast();
+                
             }
            
 
@@ -95,8 +96,15 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+
     public void Blast()
     {
+        RaycastHit hit;
+        int layerMask = 1 << 8;
+        //Forward Raycast
+
+
         Debug.Log("Boom!");
         // Set the fired flag so only Fire is only called once.
         m_Fired = true;
