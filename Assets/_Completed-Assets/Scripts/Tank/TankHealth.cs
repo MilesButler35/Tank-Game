@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Complete
 {
@@ -18,7 +19,16 @@ namespace Complete
         private float m_CurrentHealth;                      // How much health the tank currently has.
         private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
 
-
+        public void Update()
+        {
+            if(Input.GetMouseButtonDown(1))
+                m_CurrentHealth = m_StartingHealth;
+            SetHealthUI();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
         private void Awake ()
         {
             // Instantiate the explosion prefab and get a reference to the particle system on it.
@@ -47,7 +57,6 @@ namespace Complete
         {
             // Reduce current health by the amount of damage done.
             m_CurrentHealth -= amount;
-
             // Change the UI elements appropriately.
             SetHealthUI ();
 

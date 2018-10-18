@@ -14,19 +14,13 @@ public class Enemy : MonoBehaviour
     float turnSpeed = 2;
     Vector3[] path;
     int targetIndex;
-    bool m_Fired = false;
     Vector3 destination, towards;
-    int maxShell = 1;
-    int count = 0;
     private float shotCooldown = 1.5f;
     private bool offCooldown = true;
     private bool KA = false;
 
     void Update()
     {
-        
-        destination = target.position; //updates the position of the player
-        Vector3 towards = destination - transform.position; //the distance between
         //Debug.Log(towards.magnitude);
         //Debug.Log(offCooldown);
         if(offCooldown && CheckBarrelLOS())
@@ -47,6 +41,23 @@ public class Enemy : MonoBehaviour
             }
         }
         
+    }
+
+    private void TurnAndShoot()
+    {
+        Vector3 blastTarget = Random.insideUnitSphere * 10;
+        blastTarget.y = 0;
+        blastTarget = blastTarget + target.position;
+        Debug.Log(blastTarget);
+        // Calculate direction from character to target
+        Vector3 towards = blastTarget - transform.position;
+        Quaternion targetAngle = Quaternion.LookRotation(towards);
+        for(int i=0; i < 20; i++)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetAngle, Time.deltaTime * turnSpeed/100f);
+        }
+        Blast();
+        StartCoroutine(Reload());
     }
 
     private void MoveToTarget(Vector3 _target)
@@ -78,16 +89,10 @@ public class Enemy : MonoBehaviour
 
     }
 
+
     private void MoveToPlayer()
     {
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-    }
-    private void TurnAndShoot()
-    {
-        
-        Blast();
-        StartCoroutine(Reload());
-
     }
 
     private bool CheckGeneralLOS()
@@ -189,14 +194,11 @@ public class Enemy : MonoBehaviour
 
     public void Blast()
     {
-        RaycastHit hit;
         int layerMask = 1 << 8;
         //Forward Raycast
 
 
-        Debug.Log("Boom!");
-        // Set the fired flag so only Fire is only called once.
-        m_Fired = true;
+        //Debug.Log("Boom!");
 
         // Create an instance of the shell and store a reference to it's rigidbody.
         Rigidbody shellInstance =
@@ -208,6 +210,5 @@ public class Enemy : MonoBehaviour
         // Change the clip to the firing clip and play it.
         m_ShootingAudio.clip = m_FireClip;
         m_ShootingAudio.Play();
-        count++ ;
     }
 }
