@@ -104,6 +104,10 @@ public class TankMovement : MonoBehaviour
         // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
         Vector3 movement = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
 
+        if(movement == Vector3.zero)
+        {
+            m_Rigidbody.velocity = Vector3.zero;
+        }
         // Apply this movement to the rigidbody's position.
         //m_Rigidbody.velocity = movement *8f;
           m_Rigidbody.MovePosition(m_Rigidbody.position + movement);

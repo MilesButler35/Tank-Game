@@ -36,7 +36,7 @@ namespace Complete
                     continue;
 
                 // Add an explosion force.
-                targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
+                //targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
 
                 targetRigidbody.velocity = Vector3.zero;
 
@@ -66,7 +66,7 @@ namespace Complete
             // Once the particles have finished, destroy the gameobject they are on.
             ParticleSystem.MainModule mainModule = m_ExplosionParticles.main;
             //DestroyImmediate(m_ExplosionParticles.gameObject, true);
-            // Destroy (m_ExplosionParticles.gameObject, mainModule.duration);
+            Destroy (m_ExplosionParticles.gameObject, mainModule.duration);
 
             // Destroy the shell.
             Destroy (gameObject);
