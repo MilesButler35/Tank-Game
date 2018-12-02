@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tank-Game", "Assembly-CSharp.csproj", "{EB2F4F19-3B2D-D3B6-3BB9-620EE8C2E736}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{EB2F4F19-3B2D-D3B6-3BB9-620EE8C2E736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tank-Game", "Assembly-CSharp-firstpass.csproj", "{3FDF65AC-7DA6-7FBB-61F1-0DFE17E69FF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{3FDF65AC-7DA6-7FBB-61F1-0DFE17E69FF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tank-Game", "Assembly-CSharp-Editor.csproj", "{84B535A2-5416-BA33-A676-E41A068F78CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{84B535A2-5416-BA33-A676-E41A068F78CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
