@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour {
 
     GameObject[] gameOverObjects;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject losePanel;
     int count, temp;
 
     // Use this for initialization
@@ -36,15 +38,15 @@ public class UIManager : MonoBehaviour {
         //}
 
         //uses the missing enemy to bring up canvas objects
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 1 || (GameObject.FindGameObjectsWithTag("Player").Length < 1)) //if all tanks are gone bring up screen
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 1) //if all tanks are gone bring up screen
         {
            
             if (Time.timeScale == 1)
-            {
-                
+            {               
                 Time.timeScale = 0;
                 Debug.Log("SHOWTIME");
-                showPaused();
+                //showPaused();
+                winPanel.SetActive(true);
             }
           //  else if (Time.timeScale == 0)
            // {
@@ -53,7 +55,19 @@ public class UIManager : MonoBehaviour {
                // HidePaused();
            // }
         }
-        
+
+        if(GameObject.FindGameObjectsWithTag("Player").Length < 1)
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                Debug.Log("SHOWTIME");
+                //showPaused();
+                losePanel.SetActive(true);
+            }
+        }
+
+
     }
 
 
