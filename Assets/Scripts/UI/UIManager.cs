@@ -8,23 +8,29 @@ public class UIManager : MonoBehaviour {
     GameObject[] gameOverObjects;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
+    //[SerializeField] private AudioSource loseSound; TFAY
+    //[SerializeField] private AudioSource winSound; TFAY
     int count, temp;
-
+    string sceneName;
     // Use this for initialization
     void Start()
     {
+      //  winSound = GetComponent<AudioSource>(); TFAY
+       // loseSound  = GetComponent<AudioSource>(); TFAY
         count = GameObject.FindGameObjectsWithTag("Enemy").Length;
         temp = count;
 
         Time.timeScale = 1;
         gameOverObjects = GameObject.FindGameObjectsWithTag("ShowOnWin");
         HidePaused();
+        sceneName = SceneManager.GetActiveScene().name;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       // Debug.Log(sceneName);
        // count = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
 
@@ -38,7 +44,7 @@ public class UIManager : MonoBehaviour {
         //}
 
         //uses the missing enemy to bring up canvas objects
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 1) //if all tanks are gone bring up screen
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 1 && sceneName != "Title-Screen") //if all tanks are gone bring up screen
         {
            
             if (Time.timeScale == 1)
@@ -47,6 +53,8 @@ public class UIManager : MonoBehaviour {
                 Debug.Log("SHOWTIME");
                 //showPaused();
                 winPanel.SetActive(true);
+                
+               // winSound.Play(); TFAY
             }
           //  else if (Time.timeScale == 0)
            // {
@@ -56,7 +64,7 @@ public class UIManager : MonoBehaviour {
            // }
         }
 
-        if(GameObject.FindGameObjectsWithTag("Player").Length < 1)
+        if(GameObject.FindGameObjectsWithTag("Player").Length < 1 && sceneName != "Title-Screen")
         {
             if (Time.timeScale == 1)
             {
@@ -64,6 +72,7 @@ public class UIManager : MonoBehaviour {
                 Debug.Log("SHOWTIME");
                 //showPaused();
                 losePanel.SetActive(true);
+               // loseSound.Play(); TFAY
             }
         }
 
@@ -120,5 +129,11 @@ public class UIManager : MonoBehaviour {
     {
         Debug.Log("Back to stage select");
         SceneManager.LoadScene("StageSelect");
+    }
+
+    public void toTitle()
+    {
+        Debug.Log("Back to Title Screen");
+        SceneManager.LoadScene("Title-Screen");
     }
 }
